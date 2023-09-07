@@ -1,0 +1,10 @@
+.delivery__option {
+  font: 500 12px/16px Inter, sans-serif;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  em {
+    font-style: normal !important;
+    color: #1a73e8 !important;
+  }
+}

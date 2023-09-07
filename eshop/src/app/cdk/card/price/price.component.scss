@@ -1,0 +1,21 @@
+.price__discount--hidden {
+  opacity: 0;
+}
+.price__prev,
+.price__discount-badge {
+  display: inline-block;
+  font: 500 16px/22px Inter, sans-serif;
+}
+.price__prev {
+  margin-right: 4px;
+  text-decoration: line-through;
+}
+.price__discount-badge {
+  padding: 0 4px;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(185, 50, 50);
+}
+.price {
+  font: 500 24px/28px Inter, sans-serif;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
+  <file id="ngi18n" original="ng.template">
+    <unit id="187187500641108332">
+      <notes>
+        <note category="location">src/app/card/card.component.html:14</note>
+      </notes>
+      <segment>
+        <source><ph id="0" equiv="INTERPOLATION" disp="{{product.title}}"/></source>
+      </segment>
+    </unit>
+    <unit id="7633172791873602499">
+      <notes>
+        <note category="location">src/app/card/card.component.html:18</note>
+      </notes>
+      <segment>
+        <source><ph id="0" equiv="INTERPOLATION" disp="{{product.rating?.reviews}}"/> отзыва</source>
+      </segment>
+    </unit>
+    <unit id="2788805461491763227">
+      <notes>
+        <note category="location">src/app/card/delivery-options/delivery-options.component.ts:7,9</note>
+      </notes>
+      <segment>
+        <source> Доставим на дом: <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;"><ph id="1" equiv="INTERPOLATION" disp="{{ options.delivery }}"/></pc></source>
+      </segment>
+    </unit>
+    <unit id="4261860083086508182">
+      <notes>
+        <note category="location">src/app/card/delivery-options/delivery-options.component.ts:11,13</note>
+      </notes>
+      <segment>
+        <source> Доставка в постамат: <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;"><ph id="1" equiv="INTERPOLATION" disp="{{ postamate }}"/></pc></source>
+      </segment>
+    </unit>
+    <unit id="8104247105189163477">
+      <notes>
+        <note category="location">src/app/card/delivery-options/delivery-options.component.ts:15,17</note>
+      </notes>
+      <segment>
+        <source> В наличии: <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;"><ph id="1" equiv="INTERPOLATION" disp="{{ options.available }}"/> шт.</pc></source>
+      </segment>
+    </unit>
+    <unit id="3495697011426917707">
+      <notes>
+        <note category="location">src/app/catalog/catalog.component.html:3</note>
+      </notes>
+      <segment>
+        <source>Каталог товаров</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

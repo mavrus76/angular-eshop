@@ -1,0 +1,77 @@
+@import '../mixins/mixins.scss';
+@import '../theme/colors.scss';
+@include theme-button($app-colors);
+$primary: map-get($app-colors, primary);
+$primary-hover: map-get($app-colors, primary-hover);
+$accent: map-get($app-colors, accent);
+$accent-hover: map-get($app-colors, accent-hover);
+$success: map-get($app-colors, success);
+$warning: map-get($app-colors, warning);
+$foreground: map-get($app-colors, foreground);
+
+:host {
+  display: inline-block;
+  // width: 100%;
+  width: max-content;
+}
+.button-base {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px;
+  /* outline: none; */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #555;
+  font: 500 16px/1 Inter, sans-serif;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid $primary;
+    color: #fff;
+    background-color: $primary;
+    transition: all 0.15 ease-out;
+  }
+}
+
+.btn-icon {
+  position: absolute;
+}
+.button-base:not(.button-active):not(.button-disabled):hover {
+  cursor: pointer;
+}
+.large {
+  padding: 15px 25px;
+  font-size: 16px;
+}
+.small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.basic {
+  background-color: transparent;
+}
+.basic:hover {
+  background-color: transparent;
+  opacity: 0.7;
+}
+.flat:hover {
+  border: 1px solid transparent;
+  background-color: $primary;
+}
+.stroked:hover {
+  // background-color: #a19e9e;
+  background-color: $primary;
+}
+.button-active {
+  border: 1px solid #0000ff; // blue
+  cursor: default;
+}
+.button-disabled {
+  cursor: default;
+}
+.button-disabled:hover {
+  cursor: not-allowed;
+}

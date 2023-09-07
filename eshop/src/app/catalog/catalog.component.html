@@ -1,0 +1,53 @@
+<div class="catalog">
+  <div class="catalog__top">
+    <h2 class="catalog__title">{{ title }}</h2>
+    <div class="catalog__cart">
+      <!-- <app-cart
+        [inCart]="cartService.inCart"
+        (removeProduct)="cartService.removeProduct($event)"
+        (clear)="clearCart()"
+        (addProductDrag)="addProductDrag($event)"></app-cart> -->
+    </div>
+  </div>
+
+  <app-toggle
+    [toggles]="buttons"
+    (toggleChanged)="applyQuery($event)"></app-toggle>
+
+  <!-- {{ products$ | async | json }} -->
+  <ng-container *ngIf="products$ | async as products">
+    <div class="catalog__cards">
+      <div *ngFor="let product of productsData; let i = index">
+        <app-card-api
+          [product]="product"
+          (addProduct)="cartService.addProduct($event)"
+          (addToCart)="addToCart($event)"
+          (removeFromCart)="removeFromCart($event)"
+          (addToFavorites)="addToFavorites($event)"
+          (removeFromFavorites)="removeFromFavorites($event)">
+        </app-card-api>
+      </div>
+    </div>
+    <footer class="footer">
+      <!-- {{ products.meta['itemsPerPage'] }} -->
+      <div
+        *ngFor="
+          let page of createPagesArray(products.meta['totalPages']);
+          index as i
+        "></div>
+      <div class="catalog__btn-more">
+        <app-button
+          text="Загрузить ещё"
+          color="accent"
+          [isDisabled]="
+            productsData.length >= products.meta['totalItems'] ? true : false
+          "
+          (click)="
+            productsData.length <= products.meta['totalItems']
+              ? this.addProducts()
+              : this.storageService.clearStorage()
+          "></app-button>
+      </div>
+    </footer>
+  </ng-container>
+</div>

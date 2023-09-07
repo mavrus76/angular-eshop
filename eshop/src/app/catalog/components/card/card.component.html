@@ -1,0 +1,32 @@
+<div draggable="true" drag [data]="product" class="card">
+  <div class="card__inner">
+    <figure class="card__gallery">
+      <img
+        class="card__gallery-image"
+        data-test="open-card"
+        (click)="open()"
+        [src]="image" />
+    </figure>
+    <div class="card__company">{{ product.company }}</div>
+    <div class="card__title">{{ product.title }}</div>
+    <div class="card__category">{{ product.category }}</div>
+
+    <app-rates-api class="card__rate">
+      Рейтинг: {{ product.rating }}
+    </app-rates-api>
+
+    <app-price-api>
+      {{ product.price | currency: 'RUB':'symbol-narrow':'1.0-0' }}
+    </app-price-api>
+
+    <div class="card__actions">
+      <app-button
+        text="Добавить в корзину"
+        [buttonType]="'stroked'"
+        (click)="onClick()"></app-button>
+      <app-button-icon
+        [active]="isFavorite"
+        (click)="toggleFavorite()"></app-button-icon>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,125 @@
+@import '../theme/colors.scss';
+
+.sh-input {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 4px 11px;
+  height: 32px;
+  width: 100%;
+}
+.sh-input::placeholder {
+  color: #d9d9d9;
+}
+
+.input-disabled {
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.sh-input:focus {
+  border: none;
+  box-sizing: none;
+  outline: none;
+}
+
+.input-field-wrapper {
+  display: flex;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.input-field-affix {
+  border: 1px solid #d9d9d9;
+  border-right: none;
+  padding-left: 8px;
+  color: #626262;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-addOn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 11px;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 0px;
+  transition: all 0.3s;
+}
+
+.input-field-addOn-suffix {
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-left: 0px;
+}
+
+.input-prefix-wrapper > input.sh-input {
+  border-left: none;
+}
+
+.input-prefix-wrapper > .input-field-wrapper > span > input.sh-input {
+  border-left: none;
+}
+
+.input-suffix {
+  border-right: 0px;
+}
+
+.input-prefix {
+  border-left: 0px;
+}
+
+.sh-input {
+  &.input-sm {
+    padding: 0px 7px;
+    height: 24px;
+  }
+  &.input-lg {
+    padding: 6px 11px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@mixin input-color($colors) {
+  $primary: map-get($colors, primary);
+  $accent: map-get($colors, accent);
+  $warn: map-get($colors, warn);
+  $foreground: map-get($colors, foreground);
+
+  .sh-input {
+    caret-color: $primary;
+  }
+  .input-focused > .input-field-wrapper > span > input.sh-input {
+    border: 1px solid $primary;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .input-focused-affix > .input-field-wrapper > span > input.sh-input {
+    border: 1px solid $primary;
+    border-left: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .input-focused-affix > .input-field-wrapper > .input-field-affix {
+    border: 1px solid $primary;
+    border-right: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+}
+
+@mixin input-theme($theme, $typography) {
+  @include input-color($theme);
+}

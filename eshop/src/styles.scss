@@ -1,0 +1,64 @@
+@import './app/cdk/mixins/mixins.scss';
+@import './app/cdk/theme/colors.scss';
+@import './app/cdk/button/button-theme.scss';
+@import './app/cdk/input/input-theme.scss';
+
+@include theme-button($app-colors);
+$primary: map-get($app-colors, primary);
+
+html {
+  margin: 0 calc(-1 * (100vw - 100%)) 0 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter, sans-serif;
+}
+.header {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: whitesmoke;
+  background-color: $primary;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}

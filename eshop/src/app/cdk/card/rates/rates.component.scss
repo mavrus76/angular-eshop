@@ -1,0 +1,38 @@
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+input {
+  display: none;
+}
+label {
+  display: inline-block;
+  width: 20px;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #dadada;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+label::before {
+  content: 'star';
+}
+label:hover:before,
+label:hover ~ label:before,
+input:checked ~ label:before {
+  color: #ffbb00;
+}
+label.active {
+  color: #ffbb00;
+}

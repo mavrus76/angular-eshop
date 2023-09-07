@@ -1,0 +1,82 @@
+@import '../mixins/mixins.scss';
+@import '../theme/colors.scss';
+@include theme-button($app-colors);
+$primary: map-get($app-colors, primary);
+$primary-hover: map-get($app-colors, primary-hover);
+$accent: map-get($app-colors, accent);
+$accent-hover: map-get($app-colors, accent-hover);
+$success: map-get($app-colors, success);
+$warning: map-get($app-colors, warning);
+$foreground: map-get($app-colors, foreground);
+
+.flat {
+  border: 0px;
+  &.primary {
+    color: #fff !important;
+    background-color: $primary !important;
+    &:hover {
+      background-color: $primary-hover !important;
+    }
+  }
+  &.accent {
+    color: #fff !important;
+    background-color: $accent !important;
+    &:hover {
+      background-color: $accent-hover !important;
+    }
+  }
+  &.success {
+    color: #fff !important;
+    background-color: $success !important;
+  }
+  &.warning {
+    color: #fff !important;
+    background-color: $warning !important;
+  }
+  &.button-disabled {
+    color: #fff !important;
+    background-color: $foreground !important;
+    &:hover {
+      background-color: $foreground !important;
+    }
+  }
+}
+
+.basic {
+  color: black;
+  border: 0px !important;
+  &.primary {
+    color: $primary !important;
+  }
+  &.accent {
+    color: $accent !important;
+  }
+  &.success {
+    color: $success !important;
+  }
+  &.warning {
+    color: $warning !important;
+  }
+  &.button-disabled {
+    color: $foreground !important;
+  }
+}
+
+.stroked {
+  border: 1px solid gainsboro;
+  &.primary {
+    color: $primary;
+  }
+  &.accent {
+    color: $accent;
+  }
+  &.success {
+    color: $success;
+  }
+  &.warning {
+    color: $warning;
+  }
+  &.button-disabled {
+    color: $foreground;
+  }
+}

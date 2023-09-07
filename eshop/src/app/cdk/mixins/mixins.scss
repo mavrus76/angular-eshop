@@ -1,0 +1,15 @@
+@mixin theme-button($colors) {
+  $primary: map-get($colors, primary);
+  $accent: map-get($colors, accent);
+  $success: map-get($colors, success);
+  $warning: map-get($colors, warning);
+  $foreground: map-get($colors, foreground);
+}
+
+@mixin theme-input($colors) {
+  $primary: map-get($colors, primary);
+  $accent: map-get($colors, accent);
+  $success: map-get($colors, success);
+  $warning: map-get($colors, warning);
+  $foreground: map-get($colors, foreground);
+}

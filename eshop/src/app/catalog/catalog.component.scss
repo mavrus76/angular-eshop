@@ -1,0 +1,34 @@
+@import '../cdk/mixins/mixins.scss';
+@import '../cdk/theme/colors.scss';
+@include theme-button($app-colors);
+$primary: map-get($app-colors, primary);
+$accent: map-get($app-colors, accent);
+$success: map-get($app-colors, success);
+$warning: map-get($app-colors, warning);
+$foreground: map-get($app-colors, foreground);
+
+.footer {
+  position: relative;
+}
+.catalog__top,
+.catalog__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog__top {
+  justify-content: space-between;
+}
+.catalog__cards {
+  justify-content: space-around;
+}
+.catalog__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.catalog__btn-more {
+  position: absolute;
+  left: 50%;
+  padding-bottom: 50px;
+  transform: translateX(-50%);
+}

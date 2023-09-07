@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "company": "Google",
+      "title": "Смартфон Google Pixel 4 XL 6/128GB",
+      "image": "https://cdn1.ozone.ru/s3/multimedia-5/6064227317.jpg",
+      "rating": {
+        "value": 5,
+        "reviews": 4
+      },
+      "price": {
+        "value": 30000,
+        "discount": 0.17,
+        "code": "eur"
+      },
+      "deliveryOptions": {
+        "delivery": "21.07",
+        "postamate": true,
+        "available": 1
+      },
+      "badge": {
+        "color": "#198838",
+        "text": "Выбор покупателей"
+      },
+      "colors": {
+        "one": {
+          "color": "black",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-5/6064227317.jpg"
+        },
+        "two": {
+          "color": "white",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-b/6064227323.jpg"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "company": "Google",
+      "title": "Смартфон Google Pixel 3 64GB",
+      "image": "https://cdn1.ozone.ru/s3/multimedia-9/6164669013.jpg",
+      "rating": {
+        "value": 3,
+        "reviews": 5
+      },
+      "price": {
+        "value": 24540,
+        "discount": 0.3,
+        "code": "usd"
+      },
+      "deliveryOptions": {
+        "delivery": "21.07",
+        "postamate": false,
+        "available": 0
+      },
+      "badge": {
+        "color": "#D93025",
+        "text": "Лучшая цена"
+      },
+      "colors": {
+        "one": {
+          "color": "black",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-9/6164669013.jpg"
+        },
+        "two": {
+          "color": "purple",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-c/6165691128.jpg"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "company": "Apple",
+      "title": "Смартфон Apple iPhone Xr 128GB",
+      "image": "https://cdn1.ozone.ru/s3/multimedia-g/wc1200/6342068020.jpg",
+      "rating": {
+        "value": 4,
+        "reviews": 7
+      },
+      "price": {
+        "value": 54990,
+        "discount": 0
+      },
+      "deliveryOptions": {
+        "delivery": "19.07",
+        "postamate": false,
+        "available": 2
+      },
+      "badge": {
+        "color": "#e37401",
+        "text": "Быстрая доставка"
+      },
+      "colors": {
+        "one": {
+          "color": "white",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-g/wc1200/6342068020.jpg"
+        },
+        "two": {
+          "color": "#fa604b",
+          "image": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6342502167.jpg"
+        }
+      }
+    }
+  ]
+}
